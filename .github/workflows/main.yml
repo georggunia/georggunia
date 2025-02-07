@@ -21,6 +21,9 @@ jobs:
     timeout-minutes: 5
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
       - name: generate github stats card
         uses: LuciNyan/pixel-profile/action@v1.0.0
         with:
