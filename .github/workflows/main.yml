@@ -1,17 +1,7 @@
 name: generate-and-upload-card
 
 on:
-  # run automatically every 24 hours
-  schedule:
-    - cron: "0 */1 * * *"
-
-  # allows to manually run the job at any time
   workflow_dispatch:
-
-  # run on every push on the master branch
-  push:
-    branches:
-    - master
 
 jobs:
   generate:
@@ -21,11 +11,8 @@ jobs:
     timeout-minutes: 5
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        
       - name: generate github stats card
-        uses: LuciNyan/pixel-profile/action@v1.0.0
+        uses: LuciNyan/pixel-profile/action@main
         with:
           outputs: |
             dist/github-stats?username=georggunia&theme=fuji
