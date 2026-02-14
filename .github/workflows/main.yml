@@ -25,10 +25,10 @@ jobs:
         uses: LuciNyan/pixel-profile/action@main
         with:
           outputs: |
-            dist/github-stats?username=georggunia&theme=fuji&include_all_commits=true
-            dist/github-stats-dark?username=georggunia&theme=fuji&include_all_commits=true
+            dist/github-stats?username=georggunia&theme=fuji&include_all_commits=true&hide=rank
+            dist/github-stats-dark?username=georggunia&theme=fuji&include_all_commits=true&hide=rank
           crt_outputs: |
-            dist/github-stats-crt?username=georggunia&include_all_commits=true
+            dist/github-stats-crt?username=georggunia&include_all_commits=true&hide=rank
 
       # push the content of <build_dir> to a branch
       # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
