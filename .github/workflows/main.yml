@@ -19,8 +19,12 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
-
+    
     steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: generate github stats card
         uses: LuciNyan/pixel-profile/action@main
         with:
@@ -40,22 +44,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # 🔹 NEU: Repository auschecken (für README)
-      - name: checkout repository
-        uses: actions/checkout@v4
-
-            # 🔹 NEU: Cache-Buster in README aktualisieren
       - name: update README cache buster
         run: |
           TS=$(date +%s)
           sed -i "s/v=[0-9]\+/v=$TS/g" README.md
 
-      # 🔹 NEU: README committen (damit GitHub neu rendert)
       - name: commit README update
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add README.md
-          git commit -m "chore: refresh README image cache" || echo "No changes"
+          git commit -m "chore: refresh README image cache" || exit 0
           git push
-
