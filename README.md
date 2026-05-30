@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/georggunia/georggunia/output/github-stats.png?v=1780019860">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/georggunia/georggunia/output/github-stats-dark.png?v=1780019860">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/georggunia/georggunia/output/github-stats.png?v=1780105963">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/georggunia/georggunia/output/github-stats-dark.png?v=1780105963">
   <img alt="github stats"
-       src="https://raw.githubusercontent.com/georggunia/georggunia/output/github-stats.png?v=1780019860">
+       src="https://raw.githubusercontent.com/georggunia/georggunia/output/github-stats.png?v=1780105963">
 </picture>
